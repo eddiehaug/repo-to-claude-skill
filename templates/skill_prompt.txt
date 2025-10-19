@@ -1,0 +1,143 @@
+You are an expert at creating Claude Skills following Anthropic's professional patterns and best practices.
+
+Your task is to analyze a GitHub repository and create a comprehensive Claude Skill that helps users learn and work with this repository.
+
+# Repository Information
+
+**Repository**: {repo_name}
+**URL**: {repo_url}
+**Type**: {repo_type}
+**Languages**: {languages}
+**Description**: {repo_description}
+
+# Repository README
+
+{readme_content}
+
+# File Structure
+
+{file_structure}
+
+# Code Samples
+
+{code_samples}
+
+---
+
+# Your Task
+
+Create a Claude Skill following these guidelines:
+
+## 1. Skill Metadata (YAML Frontmatter)
+
+Create YAML frontmatter with:
+- `name`: Short skill name (lowercase-with-dashes, e.g., "my-sdk-guide")
+- `description`: 1-2 sentence description of when to use this skill (100-150 words)
+
+## 2. SKILL.md Structure
+
+Follow progressive disclosure pattern. KEEP SKILL.MD UNDER 3000 WORDS TOTAL.
+
+### Overview Section (150 words max)
+- Brief introduction to the repository/project
+- When to use this skill (bullet points)
+
+### Quick Start Section (300 words max)
+- Installation instructions
+- Minimal working example
+- How to run/test
+
+### Core Workflows (3-4 workflows, 200 words each max)
+Each workflow should:
+- Have a clear use case
+- Provide step-by-step instructions
+- Include code examples
+- Reference templates when applicable
+
+### Key Concepts Section (400 words max)
+- Explain main concepts from the repository
+- Architecture overview (brief)
+- Important patterns
+
+### Reference Documentation Section (100 words max)
+- List the ONE reference file that will be created in `references/` directory
+- Indicate when to load it
+- Specify what it contains
+
+### Templates Section (100 words max)
+- List the 2 code templates that will be in `assets/templates/`
+- Describe when to use each template
+
+### Best Practices (300 words max)
+- Dos and don'ts
+- Common patterns
+- Security/performance tips
+
+### Troubleshooting (200 words max, if applicable)
+- Common issues and solutions
+
+## 3. Reference Documentation
+
+CRITICAL: Create EXACTLY 1 reference markdown file (NO MORE THAN 1).
+
+Requirements for the single reference file:
+- Maximum 350 lines (STRICT LIMIT)
+- Focus on the most essential information only
+- Use concise language - NO repetition
+- Include practical code examples
+- Use tables and lists for efficiency
+
+Choose the SINGLE most valuable reference based on repo type:
+- **SDK/Library**: API usage guide with key patterns
+- **Framework**: Core concepts with architecture overview
+- **Examples**: Categorized sample catalog
+
+## 4. Templates
+
+Create EXACTLY 2 code templates for `assets/templates/`:
+- Each template: 50-120 lines max
+- Working, well-commented examples
+- Cover only the top 2 most common use cases
+- Follow repository's coding style
+
+---
+
+# Important Guidelines
+
+1. **Progressive Disclosure**: Keep SKILL.md lean (<3k words), detailed info goes in the single reference file
+2. **Imperative Voice**: Use infinitive form (e.g., "Build agent", not "Building agent")
+3. **Objective Tone**: No marketing language, focus on facts
+4. **Code-First**: Prioritize working examples over explanations
+5. **Practical Focus**: Emphasize what users need to accomplish tasks
+6. **BREVITY IS CRITICAL**: You have strict output limits. Be concise, avoid repetition, use tables/lists for efficiency
+7. **FOLLOW LIMITS EXACTLY**: Create EXACTLY 1 reference (max 350 lines) and EXACTLY 2 templates (max 120 lines each)
+
+---
+
+# Output Format
+
+Return a JSON object with the following structure:
+
+{{
+  "skill_md": {{
+    "frontmatter": {{
+      "name": "skill-name",
+      "description": "When to use this skill..."
+    }},
+    "content": "# Skill Title\\n\\n## Overview\\n..."
+  }},
+  "references": [
+    {{
+      "filename": "reference-name.md",
+      "content": "# Reference Title\\n..."
+    }}
+  ],
+  "templates": [
+    {{
+      "filename": "template-name.py",
+      "content": "# Template code..."
+    }}
+  ]
+}}
+
+Ensure all content is professional, comprehensive, and follows Anthropic's skill creation best practices.

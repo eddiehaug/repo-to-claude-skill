@@ -1,0 +1,177 @@
+/* Repo-to-Skill Converter - Custom Styles */
+
+/* Sidebar Branding */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
+    color: white !important;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: white !important;
+}
+
+[data-testid="stSidebar"] label {
+    color: white !important;
+}
+
+[data-testid="stSidebar"] .stMarkdown {
+    color: white !important;
+}
+
+[data-testid="stSidebar"] p {
+    color: white !important;
+}
+
+/* Main Headers */
+h1 {
+    color: #667eea;
+    font-weight: 700;
+}
+
+h2 {
+    color: #764ba2;
+    font-weight: 600;
+}
+
+/* Buttons - Primary */
+.stButton button[kind="primary"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stButton button[kind="primary"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Download Button */
+.stDownloadButton button {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stDownloadButton button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.4);
+}
+
+/* Progress Bar */
+.stProgress > div > div {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+}
+
+/* Input Fields */
+.stTextInput input,
+.stTextArea textarea {
+    border-radius: 8px;
+    border: 2px solid #4a5568;
+    transition: all 0.3s ease;
+}
+
+.stTextInput input:focus,
+.stTextArea textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 1rem;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: 8px 8px 0 0;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+}
+
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+}
+
+/* Metrics */
+.stMetric {
+    background: rgba(102, 126, 234, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.stMetric [data-testid="stMetricValue"] {
+    color: #667eea;
+    font-weight: 700;
+}
+
+/* Success/Error/Warning/Info Messages */
+.stSuccess {
+    border-left: 4px solid #48bb78;
+    border-radius: 8px;
+}
+
+.stError {
+    border-left: 4px solid #f56565;
+    border-radius: 8px;
+}
+
+.stWarning {
+    border-left: 4px solid #f59e0b;
+    border-radius: 8px;
+}
+
+.stInfo {
+    border-left: 4px solid #3b82f6;
+    border-radius: 8px;
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Links */
+a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2d3748;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
