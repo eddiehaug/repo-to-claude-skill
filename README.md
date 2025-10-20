@@ -11,7 +11,7 @@ Transform any GitHub repository into a comprehensive Claude Skill with just one 
 ✅ **AI-Powered Analysis**: Intelligently analyzes repository structure, documentation, and code using multiple AI providers
 
 ✅ **Flexible Authentication**: 4 authentication methods supported:
-   - **Vertex AI** (Gemini 2.5 Flash/Pro, Claude Sonnet 4.5) - Recommended
+   - **Vertex AI** (Gemini 2.5 Flash/Pro, Claude Sonnet 4.5)
    - **Google AI Studio** (Gemini models with API key)
    - **Anthropic API** (Claude 3/3.5 models)
    - **OpenAI API** (GPT-4o, o1 models)
