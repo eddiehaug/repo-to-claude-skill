@@ -66,7 +66,7 @@ pip install -r requirements.txt
 
 3. **Set up authentication**:
 
-**Option A: Vertex AI (Recommended)**
+**Option A: Vertex AI**
 
 ```bash
 # Install Google Cloud SDK if not already installed
